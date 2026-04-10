@@ -1,0 +1,194 @@
+{
+  "compiler-version": "0.30.0",
+  "language-version": "0.22.0",
+  "runtime-version": "0.15.0",
+  "circuits": [
+    {
+      "name": "initialize",
+      "pure": false,
+      "proof": true,
+      "arguments": [
+        {
+          "name": "initial_root",
+          "type": {
+            "type-name": "Field"
+          }
+        },
+        {
+          "name": "admin_pk",
+          "type": {
+            "type-name": "Field"
+          }
+        },
+        {
+          "name": "act_val",
+          "type": {
+            "type-name": "Uint",
+            "maxval": 18446744073709551615
+          }
+        },
+        {
+          "name": "vouch_val",
+          "type": {
+            "type-name": "Uint",
+            "maxval": 18446744073709551615
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Tuple",
+        "types": [
+        ]
+      }
+    },
+    {
+      "name": "proposeSurvey",
+      "pure": false,
+      "proof": true,
+      "arguments": [
+        {
+          "name": "proposal_id",
+          "type": {
+            "type-name": "Field"
+          }
+        },
+        {
+          "name": "title",
+          "type": {
+            "type-name": "Opaque",
+            "tsType": "string"
+          }
+        },
+        {
+          "name": "content",
+          "type": {
+            "type-name": "Opaque",
+            "tsType": "string"
+          }
+        },
+        {
+          "name": "secret_key",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        },
+        {
+          "name": "member_id",
+          "type": {
+            "type-name": "Field"
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Tuple",
+        "types": [
+        ]
+      }
+    },
+    {
+      "name": "upvoteProposal",
+      "pure": false,
+      "proof": true,
+      "arguments": [
+        {
+          "name": "proposal_id",
+          "type": {
+            "type-name": "Field"
+          }
+        },
+        {
+          "name": "secret_key",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        },
+        {
+          "name": "member_id",
+          "type": {
+            "type-name": "Field"
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Tuple",
+        "types": [
+        ]
+      }
+    },
+    {
+      "name": "vouchForMember",
+      "pure": false,
+      "proof": true,
+      "arguments": [
+        {
+          "name": "candidate",
+          "type": {
+            "type-name": "Field"
+          }
+        },
+        {
+          "name": "secret_key",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        },
+        {
+          "name": "member_id",
+          "type": {
+            "type-name": "Field"
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Tuple",
+        "types": [
+        ]
+      }
+    },
+    {
+      "name": "submitResponse",
+      "pure": false,
+      "proof": true,
+      "arguments": [
+        {
+          "name": "survey_id",
+          "type": {
+            "type-name": "Field"
+          }
+        },
+        {
+          "name": "choice_index",
+          "type": {
+            "type-name": "Uint",
+            "maxval": 18446744073709551615
+          }
+        },
+        {
+          "name": "secret_key",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        },
+        {
+          "name": "member_id",
+          "type": {
+            "type-name": "Field"
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Tuple",
+        "types": [
+        ]
+      }
+    }
+  ],
+  "witnesses": [
+  ],
+  "contracts": [
+  ]
+}
